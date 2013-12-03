@@ -1,5 +1,5 @@
 $(document).ready(function(){
 
-	$('.iframe').responsiveIframes();
+    $('.iframe').responsiveIframes({ openMessage: "Open iframe", closeMessage: "Close iframe" });
 	
 });

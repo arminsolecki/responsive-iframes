@@ -11,14 +11,25 @@
         
         self.init = function () {
             self.options = $.extend({}, $.responsiveIframes.defaultOptions, options);
-            
-            $('.iframe-trigger', self.$el).click(function (e) {
+
+            // wrap iframe
+            var iframeSrc = self.$el.find('iframe').wrap('<div class="iframe-content" />').attr('src');
+
+            //generate header
+            var header = '<div class="iframe-header">' +
+                              '<a href="'+ iframeSrc +'" class="iframe-trigger">'+ self.options.openMessage +'</a>' +
+                          '</div>';
+
+            var trigger = self.$el.prepend(header).find('.iframe-trigger');
+
+            // click event
+            $(trigger).click(function (e) {
                 e.preventDefault();
 
                 var $this = $(this),
                     $html = $('html'),
                     isFullScreen = $html.hasClass("iframe-full-screen"),
-                    message = isFullScreen ? "Full screen" : "Close full screen";
+                    message = isFullScreen ? self.options.openMessage : self.options.closeMessage;
 
                 $this.text(message);
 
@@ -40,6 +51,8 @@
     };
     
     $.responsiveIframes.defaultOptions = {
+        openMessage: "Full screen",
+        closeMessage: "Close"
     };
     
     $.fn.responsiveIframes = function(options){
