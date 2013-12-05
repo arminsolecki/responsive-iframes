@@ -1,3 +1,10 @@
+/**
+ * jQuery Responsive IFrames
+ * @author Armin Solecki
+ *
+ * Licensed under the MIT License (http://creativecommons.org/licenses/MIT/)
+ *
+ **/
 (function($){
     $.responsiveIframes = function(el, options){
         var self = this;
