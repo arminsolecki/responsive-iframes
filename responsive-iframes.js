@@ -41,12 +41,14 @@
                 $this.text(message);
 
                 if (isFullScreen) {
+					self.$el.removeClass("iframe-active");
                     $html.removeClass("iframe-full-screen");
                     setTimeout(function () {
                         $(window).scrollTop($this.data('iframe-scroll-position'));
                     }, 1);
                 } else {
                     $this.data('iframe-scroll-position', $(window).scrollTop());
+					self.$el.addClass("iframe-active");
                     $html.addClass("iframe-full-screen");
                 }
 
