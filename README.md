@@ -1,6 +1,9 @@
-# Responsive Iframes
+# Responsive iFrames
 
-Responsive IFrames jQuery Plugin.
+Responsive iFrames jQuery Plugin.
+
+##Demo
+[View demo](http://arminsolecki.com/demos/responsive-iframes/)
 
 ##Sample usage
 HTML
@@ -14,3 +17,15 @@ JS
 ```JavaScript
 $('.iframe').responsiveIframes();
 ```
+
+##Browser Support
+Tested using the following browsers/devices:
+
++ Latest desktop versions of Chrome, Firefox and Safari.
++ Internet Explorer 8 and above.
++ Android 4.4 (Google Chrome)
++ iOS 6.0 7.0 (Mobile Safari and Google Chrome)
+
+##Dependencies
+[jQuery](http://jquery.com/)
+
