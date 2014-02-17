@@ -3,7 +3,7 @@
 Responsive iFrames jQuery Plugin.
 
 ##Demo
-[View demo](http://arminsolecki.com/demos/responsive-iframes/)
+[View demo](http://arminsolecki.github.io/responsive-iframes/)
 
 ##Sample usage
 HTML
